@@ -31,7 +31,7 @@ class Program
                 Console.WriteLine(currentPrompt);
                 string inputEntry = Console.ReadLine();
 
-                while (inputEntry == null)
+                while (string.IsNullOrEmpty(inputEntry))
                 {
                     Console.WriteLine("Empty entries not allowed. Try again:");
                     Console.Write("Your entry: ");
@@ -48,7 +48,7 @@ class Program
             }
             else if (choice == 2)
             {
-                if (myJournal._entries != null)
+                if (myJournal._entries.Count > 0)
                 {
                     myJournal.DisplayAll();
                 }
@@ -59,12 +59,12 @@ class Program
             }
             else if (choice == 3)
             {
-                if (myJournal._entries != null)
+                if (myJournal._entries.Count > 0)
                 {
                     Console.WriteLine("What is the filename? ");
                     string FileName = Console.ReadLine();
 
-                    while (!string.IsNullOrWhiteSpace(FileName))
+                    while (string.IsNullOrWhiteSpace(FileName))
                     {
                         Console.Write("Please enter a valid file name: ");
                         FileName = Console.ReadLine();
@@ -82,7 +82,7 @@ class Program
                 Console.WriteLine("What is the filename? ");
                 string FileName = Console.ReadLine();
 
-                while (!string.IsNullOrWhiteSpace(FileName))
+                while (string.IsNullOrWhiteSpace(FileName))
                 {
                     Console.Write("Please enter a valid file name: ");
                     FileName = Console.ReadLine();

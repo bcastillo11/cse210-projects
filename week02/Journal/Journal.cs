@@ -16,9 +16,8 @@ public class Journal
         foreach (Entry currentEntry in _entries)
         {
             Console.WriteLine(new string('-', 50));
-            Console.WriteLine(currentEntry._date);
-            Console.WriteLine(currentEntry._prompt);
-            Console.WriteLine(currentEntry._entryText);
+            currentEntry.Display();
+            Console.WriteLine(new string('-', 50));
         }
     }
 
@@ -47,8 +46,6 @@ public class Journal
 
     public void LoadFromFile(string file)
     {
-        // Regex regex = new Regex(@"DATE:\s*(?<fecha>\d{4}/\d{2}/\d{2})\r?\nPROMPT:\s*(?<prompt>.+)\r?\nENTRY:\r?\n(?<entry>.*?)(?=\r?\n---|$)",
-            // RegexOptions.Singleline);
 
         try
         {
