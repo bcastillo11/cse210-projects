@@ -1,5 +1,8 @@
 using System;
 
+// As a part of exceeding the requirements, a new option was added to the menu, with two subsequent methods
+// one on the Journal class and one in the Entry class, both named 'DisplaPreview()'
+
 class Program
 {
     static void Main(string[] args)
@@ -14,7 +17,7 @@ class Program
 
         while (true)
         {
-            Console.WriteLine($"{Environment.NewLine}1. Write{Environment.NewLine}2. Display{Environment.NewLine}3. Save{Environment.NewLine}4. Load{Environment.NewLine}5. Exit.");
+            Console.WriteLine($"{Environment.NewLine}1. Write{Environment.NewLine}2. Display{Environment.NewLine}3. Save{Environment.NewLine}4. Load{Environment.NewLine}5. Search{Environment.NewLine}6. Exit.");
             Console.Write("Select: ");
             string inputChoice = Console.ReadLine();
             int choice;
@@ -89,9 +92,36 @@ class Program
                 }
 
                 myJournal.LoadFromFile(FileName);
-
             }
             else if (choice == 5)
+            {
+                // THIS IS THE IMPLEMENTATION OF THE EXCEEDING THE REQUIREMENTS SECTION.
+                if (myJournal._entries.Count > 0)
+                {
+                    Console.WriteLine("ENTRIES:");
+                    myJournal.DisplayPreview();
+                    Console.Write("Enter the entry number: ");
+                    string inputEntryNumber = Console.ReadLine();
+                    int entryNumber;
+
+
+                    while (!int.TryParse(inputEntryNumber, out entryNumber) || entryNumber > myJournal._entries.Count || entryNumber < 1)
+                    {
+                        Console.WriteLine($"'{inputEntryNumber}': is not valid, please try again.");
+                        inputEntryNumber = Console.ReadLine();
+                    }
+
+                    Console.WriteLine("");
+                    Console.WriteLine(new string('-', 50));
+                    myJournal._entries[entryNumber - 1].Display();
+                    Console.WriteLine(new string('-', 50));
+                }
+                else
+                {
+                    Console.WriteLine("Sorry, the current journal is empty");
+                }
+            }
+            else if (choice == 6)
             {
                 break;
             }

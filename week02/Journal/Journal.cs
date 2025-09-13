@@ -101,6 +101,17 @@ public class Journal
         {
             Console.WriteLine("File not found");
         }
+
+    }
+
+    public void DisplayPreview()
+    {
         
+        Console.WriteLine(new string('-', 50));
+        for (int i = 0; i < _entries.Count; i++)
+        {
+            Console.WriteLine($"{i+1}: {_entries[i].DisplayPreview()}");
+        }
+        Console.WriteLine(new string('-', 50));
     }
 }

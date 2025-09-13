@@ -11,4 +11,9 @@ public class Entry
         Console.WriteLine($"{_date} - {_prompt}");
         Console.WriteLine($"{_entryText}");
     }
+
+    public string DisplayPreview()
+    {
+        return $"{_date} - {_prompt}";
+    }
 }
