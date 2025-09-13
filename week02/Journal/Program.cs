@@ -14,7 +14,7 @@ class Program
 
         while (true)
         {
-            Console.WriteLine($"1. New Entry{Environment.NewLine}2. Display Journal{Environment.NewLine}3. Save journal to a new file{Environment.NewLine}4. Load journal from a different file.{Environment.NewLine}5. Exit.");
+            Console.WriteLine($"{Environment.NewLine}1. Write{Environment.NewLine}2. Display{Environment.NewLine}3. Save{Environment.NewLine}4. Load{Environment.NewLine}5. Exit.");
             Console.Write("Select: ");
             string inputChoice = Console.ReadLine();
             int choice;
