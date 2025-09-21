@@ -1,5 +1,9 @@
 using System;
 
+// As part of exceeding the requirements, I created a new class ScriptureGenerator, which provides random 
+// Scriptures by reading them from a txt file, creates a Scripture list (List<Scripture>) and returns a random 
+// Scripture
+
 class Program
 {
     static void Main(string[] args)
@@ -30,7 +34,7 @@ class Program
             {
                 Console.WriteLine("Sorry, please try just hitting enter or type 'quit' to finish: ");
                 interaction = Console.ReadLine();
-            }  
+            }
         }
     }
 }
