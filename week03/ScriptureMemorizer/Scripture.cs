@@ -10,6 +10,8 @@ public class Scripture
         ParseTextToWords(text);
     }
 
+    public Scripture() => _reference = null;
+
     private void ParseTextToWords(string text)
     {
         _words.Clear();
@@ -37,7 +39,7 @@ public class Scripture
 
     public string GetDisplayText()
     {
-        string text = _reference.GetTextDisplay();
+        string text = $"{_reference.GetTextDisplay()}    ";
 
         foreach (Word w in _words)
         {
