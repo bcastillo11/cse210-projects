@@ -3,6 +3,7 @@ using System;
 // As part of exceeding the requirements, I created a new class ScriptureGenerator, which provides random 
 // Scriptures by reading them from a txt file, creates a Scripture list (List<Scripture>) and returns a random 
 // Scripture
+// Also created a txt file containing the Scriptures (ScripturesFile.txt)
 
 class Program
 {
