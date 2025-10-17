@@ -246,11 +246,9 @@ public class GoalManager
             return;
         }
 
-        // Mostrar nombres para elegir
         Console.WriteLine($"{Environment.NewLine}The goals are:");
         ListGoalDetails();
 
-        // Leer índice válido (solo números dentro del rango)
         int index;
         while (true)
         {
@@ -263,7 +261,7 @@ public class GoalManager
                 continue;
             }
 
-            index -= 1; // el usuario ve 1..N, la lista es 0..N-1
+            index -= 1;
 
             if (index < 0 || index >= Goals.Count)
             {

@@ -45,37 +45,6 @@ public class CheckListGoal : Goal
         }
     }
 
-    //     public override void RecordEvent()
-    //     {
-    //         // throw new NotImplementedException();
-    //         AmountCompleted++;
-
-    //         if (AmountCompleted > Target)
-    //         {
-    //             Console.WriteLine($"Congratulations! You had previously completed this goal. You get no points at this time.{Environment.NewLine}Try completing a different goal.");
-    //             AmountCompleted--;
-    //             return;
-    //         }
-
-    //         if (IsComplete())
-    //         {
-    //             Console.WriteLine($"Congratulations! You completed your goal: \"{Name}\"{Environment.NewLine}You get {Bonus + int.Parse(Points)} points!");
-    //             return;
-    //         }
-
-    //         int halfwayPoint = (int)Math.Ceiling(Target / 2.0);
-
-
-    //         if (AmountCompleted == halfwayPoint)
-    //         {
-    //             Console.WriteLine($"Congratulation! You have earned {Bonus + int.Parse(Points)} points");
-    //         }
-    //         else
-    //         {
-    //             Console.WriteLine($"Congratulation! You have earned {Points} points");
-    //         }
-    // }
-
     public override void RecordEvent()
     {
         AmountCompleted++;
