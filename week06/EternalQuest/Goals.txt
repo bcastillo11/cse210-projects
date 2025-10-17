@@ -1,0 +1,4 @@
+1775
+SimpleGoal:Give a talk,Give a talk in sacrament meeting,50,True
+EternalGoal:Read scriptures ,Read 10 min everyday,15
+CheckListGoal:Go to the temple,Perform any ordinance,70,1500,3,3
